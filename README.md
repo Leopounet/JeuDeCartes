@@ -4,6 +4,12 @@ Le but de ce TP (et du suivant) est de coder un jeu de cartes simple,
 qui permettra à terme de simuler une partie de
 [Bataille](<https://fr.wikipedia.org/wiki/Bataille_(jeu)>).
 
+**Pour télécharger tous les fichiers, cliquez sur le bouton
+`<> Code` en vert.
+Puis, dans le menu qui s'affiche, cliquez sur `download ZIP`.
+Enfin, mettez le `.zip` téléchargé dans le dossier de votre choix,
+clique droit dessus et `extraire`.**
+
 ## Objectifs
 
 -   Apprendre à compiler plusieurs fichiers en un seul exécutable
