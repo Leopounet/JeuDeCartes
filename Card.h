@@ -20,6 +20,15 @@ typedef struct Card {
 // --------------------------------------------------
 
 /**
+ * @brief Cette fonction initialise la carte donnée
+ * avec la couleur et la valeur voulue.
+ *
+ * Si la couleur ou la suite est invalide, les deux
+ * champs doivent recevoir une valeur invalide.
+ */
+void init_card(Card * c, Suit suit, Value value);
+
+/**
  * @brief Cette fonction permet de stocker un texte
  * décrivant la carte donnée dans un buffer.
  * Par exemple, si la carte est le 3 de coeur, il
@@ -30,24 +39,6 @@ typedef struct Card {
  * 'buffer'.
  */
 void get_card_name(Card c, char * buffer);
-
-/**
- * @brief Cette fonction modifie la carte donnée
- * en changeant sa couleur par celle donnée.
- */
-void set_suit(Card * c, Suit s);
-
-/**
- * @brief Cette fonction modifie la carte donnée
- * en changeant sa valeur par celle donnée.
- */
-void set_value(Card * c, Value v);
-
-/**
- * @brief Cette fonction définie les deux champs
- * 'suit' et 'valeur' de la carte donnée.
- */
-void set_card(Card * c, Suit s, Value v);
 
 /**
  * @brief Cette fonction renvoie la couleur de la
