@@ -56,6 +56,10 @@ void deal_cards(Battle * battle, Deck * deck);
  *     - A chaque itération, il faut afficher qui joue quelle carte
  *       et qui remporte la manche
  *
+ * --------------------------------------------------------------------------------
+ * ------------------------ AMELIORATIONS POSSIBLES -------------------------------
+ * --------------------------------------------------------------------------------
+ *
  * On peut améliorer le jeu de la bataille, si vous avez réussi à coder la
  * fonction de base:
  *     - Implémenter la bataille.
