@@ -191,7 +191,7 @@ fonctionne, faites un maximum de tests dans le fichier `main.c` qui est fait pou
 Pour compiler le projet, utilisez la ligne suivante:
 
 ```sh
-cc Utils.c Value.c Suit.c Card.c Deck.c Player.c Game.c main.c -o main
+cc Utils.c Value.c Suit.c Card.c Deck.c Player.c Battle.c main.c -o main
 ```
 
 Veillez à ne pas modifier cette ligne, sauf si vous savez ce que vous faites,
@@ -246,4 +246,4 @@ Même consigne pour les joueurs dans `Player.h` et `Player.c`.
 
 #### La bataille
 
-Même consigne pour le jeu dans `Game.h` et `Game.c`.
+Même consigne pour le jeu dans `Battle.h` et `Battle.c`.

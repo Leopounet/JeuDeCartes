@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "Battle.h"
 #include "Macros.h"
 #include "Utils.h"
 

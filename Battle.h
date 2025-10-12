@@ -8,9 +8,9 @@
  * @brief Cette structure permet de représenter une 
  * partie de bataille entre deux joueurs.
  */
-typedef struct Game {
+typedef struct Battle {
     // MODIFIEZ ICI UNIQUEMENT
-} Game;
+} Battle;
 
 // --------------------------------------------------
 // -------------- MODIFICATIONS INTERDITES ----------
@@ -26,7 +26,7 @@ typedef struct Game {
  * De plus, les joueurs reçoivent les noms donnés en
  * paramètre.
  */
-void init_game(Game * game, char * player_1, char * player_2);
+void init_battle(Battle * battle, char * player_1, char * player_2);
 
 /**
  * @brief Cette fonction prend en argument un jeu de 
@@ -39,7 +39,7 @@ void init_game(Game * game, char * player_1, char * player_2);
  * cartes, alors la dernière carte du paquet n'est pas
  * distribuée.
  */
-void deal_cards(Game * game, Deck * deck);
+void deal_cards(Battle * battle, Deck * deck);
 
 /**
  * @brief Cette fonction simule une partie de bataille 
@@ -56,4 +56,4 @@ void deal_cards(Game * game, Deck * deck);
  *     - A chaque itération, il faut afficher qui joue quelle carte
  *       et qui remporte la manche
  */
-void play(Game * game);
+void play(Battle * battle);
