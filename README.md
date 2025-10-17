@@ -23,11 +23,11 @@ clique droit dessus et `extraire`.**
 Un projet en C peut vite devenir énorme et contenir beaucoup de lignes
 de code.
 De fait, il est utile de séparer son code dans différents fichiers
-fin de clarifier le code et d'en faciliter la lecture.
+afin de clarifier le code et d'en faciliter la lecture.
 On peut donc coder tout un projet dans différents fichiers, et lors de
 la compilation réunir tous les fichiers en un seul.
 
-Dans un premier temps, essayer de compiler le code suivant (mettez-le
+Dans un premier temps, essayez de compiler le code suivant (mettez-le
 dans un fichier `fichier_1.c`) :
 
 ```c
@@ -48,8 +48,8 @@ cc fichier_1.c -o fichier
 Vous devriez voir une erreur disant qu'il y a une référence
 indéfinie vers la fonction `ma_fonction`.
 C'est normal, en effet, on ne l'a jamais implémentée.
-Créer un second fichier appelé `fichier_2.c` et metter le code
-suivant dedans:
+Créer un second fichier appelé `fichier_2.c` et mettez-y le code
+suivant :
 
 ```c
 int ma_fonction(int x, int y) {
@@ -70,19 +70,19 @@ cc fichier_2.c fichier_1.c -o fichier
 
 À présent vous devriez seulement voir un _warning_ disant que la
 déclaration de la fonction est implicite, mais le fichier
-exécutable devrait avoir été crée.
+exécutable devrait avoir été créé.
 Si vous le lancez, vous verrez bien '1' s'afficher comme prévu.
 
 ### Comment le faire proprement ?
 
 Le warning n'empêche pas la compilation, mais il reflète bien un
 problème spécifique.
-En effet, dans le premier fichier que vous avez crée, ce n'est pas
+En effet, dans le premier fichier que vous avez créé, ce n'est pas
 clair d'où vient la fonction `ma_fonction`.
 Elle est dans un autre fichier, mais rien ne l'indique vraiment,
 et c'est lors de la compilation que la fonction est vraiment ajoutée.
 
-La bonne façon de faire est de crée un fichier qu'on appelle un
+La bonne façon de faire est de créer un fichier qu'on appelle un
 _header_, dans lequel on liste les fonctions qu'on va coder.
 C'est exactement ce qu'il se passe dans des fichiers comme
 `stdio.h`, en fait dans ce fichier vous n'avez pas le code
@@ -137,7 +137,7 @@ int main() {
 Pour `fichier_2.c`:
 
 ```c
-#include "fichier_2.c"
+#include "fichier_2.h"
 
 int ma_fonction(int x, int y) {
     return x + y;
