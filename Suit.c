@@ -1,5 +1,7 @@
 #include "Suit.h"
 
+#include <string.h>
+
 /**
  * @brief Cette fonction doit stocker la bonne chaîne de
  * caractères dans 'buffer' en fonction de la couleur de la carte.
@@ -17,5 +19,11 @@
  * 'buffer'.
  */
 void get_suit_name(Suit suit, char * buffer) {
-    // votre code
+    switch(suit) {
+        case SPADE: strcpy(buffer, "♣"); break;
+        case DIAMOND: strcpy(buffer, "♦"); break;
+        case CLUB: strcpy(buffer, "♠"); break;
+        case HEART: strcpy(buffer, "♥"); break;
+        default: strcpy(buffer, "?"); break;
+    }
 }

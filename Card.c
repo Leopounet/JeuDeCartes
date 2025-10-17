@@ -1,16 +1,7 @@
 #include "Card.h"
 #include "Macros.h"
 
-/**
- * @brief Cette fonction initialise la carte donnée
- * avec la couleur et la valeur voulue.
- *
- * Si la couleur ou la suite est invalide, les deux
- * champs doivent recevoir une valeur invalide.
- */
-void init_card(Card * c, Suit suit, Value value) {
-    // votre code
-}
+#include <string.h>
 
 /**
  * @brief Cette fonction permet de stocker un texte
@@ -23,7 +14,37 @@ void init_card(Card * c, Suit suit, Value value) {
  * 'buffer'.
  */
 void get_card_name(Card c, char * buffer) {
-    // votre code
+    char value[MAX_STR];
+    char suit[MAX_STR];
+    get_value_name(c.value, value);
+    get_suit_name(c.suit, suit);
+    strcpy(buffer, value);
+    strcat(buffer, suit);
+}
+
+/**
+ * @brief Cette fonction modifie la carte donnée
+ * en changeant sa couleur par celle donnée.
+ */
+void set_suit(Card * c, Suit s) {
+    c->suit = s;
+}
+
+/**
+ * @brief Cette fonction modifie la carte donnée
+ * en changeant sa valeur par celle donnée.
+ */
+void set_value(Card * c, Value v) {
+    c->value = v;
+}
+
+/**
+ * @brief Cette fonction définie les deux champs
+ * 'suit' et 'valeur' de la carte donnée.
+ */
+void set_card(Card * c, Suit s, Value v) {
+    set_suit(c, s);
+    set_value(c, v);
 }
 
 /**
@@ -31,8 +52,7 @@ void get_card_name(Card c, char * buffer) {
  * carte donnée.
  */
 Suit get_suit(Card c) {
-    // votre code
-    return INVALID_SUIT;
+    return c.suit;
 }
 
 /**
@@ -40,8 +60,7 @@ Suit get_suit(Card c) {
  * carte donnée.
  */
 Value get_value(Card c) {
-    // votre code
-    return INVALID_VALUE;
+    return c.value;
 }
 
 /**
@@ -50,8 +69,7 @@ Value get_value(Card c) {
  * couleur, et '0' sinon.
  */
 int same_suit(Card c_1, Card c_2) {
-    // votre code
-    return 0;
+    return c_1.suit == c_2.suit;
 }
 
 /**
@@ -60,8 +78,7 @@ int same_suit(Card c_1, Card c_2) {
  * valeur, et '0' sinon.
  */
 int same_value(Card c_1, Card c_2) {
-    // votre code
-    return 0;
+    return c_1.value == c_2.value;
 }
 
 /**
@@ -71,6 +88,5 @@ int same_value(Card c_1, Card c_2) {
  * carte est plus forte et '0' si elles sont égales.
  */
 int compare_cards(Card c_1, Card c_2) {
-    // votre code
-    return 0;
+    return c_1.value - c_2.value;
 }
