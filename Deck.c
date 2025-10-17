@@ -66,9 +66,8 @@ int add_card(Deck * deck, Card c) {
  * alors après la fonction, le jeu de cartes doit être:
  *    [1♠, Q♠]
  *
- * Si le jeu de carte est vide, la fonction doit 
- * afficher un message d'erreur et renvoyer '0',
- * sinon elle renvoie '1'.
+ * La fonction retourne la carte retirée, si le deck est vide,
+ * elle retourne une carte invalide.
  */
 Card remove_last_card(Deck * deck) {
     // votre code

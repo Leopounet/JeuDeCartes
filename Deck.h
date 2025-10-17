@@ -71,14 +71,14 @@ int add_card(Deck * deck, Card c);
 
 /**
  * @brief Cette fonction retire la dernière carte
- * du jeu de cartes et la renvoie.
+ * du jeu de cartes.
  * Par exemple, si le jeu de cartes est:
  *    [1♠, Q♠, K♥]
  * alors après la fonction, le jeu de cartes doit être:
  *    [1♠, Q♠]
  *
- * Si le jeu de carte est vide, la fonction doit 
- * retourner une carte dont les champs sont invalides.
+ * La fonction retourne la carte retirée, si le deck est vide,
+ * elle retourne une carte invalide.
  */
 Card remove_last_card(Deck * deck);
 
